@@ -9,9 +9,28 @@ public class RockSpawner : MonoBehaviour
 
     private float _timer;
     private float _interval;
-    private void Start()
+    private List<GameObject> _createdRocks = new();
+
+    private void OnEnable()
     {
-        StartCoroutine(nameof(SpawnCor));   
+        StartSpawn();
+    }
+
+    private void OnDisable()
+    {
+        StopSpawn();
+    }
+
+    public void StartSpawn()
+    {
+        _timer = 0;
+    
+        StartCoroutine(nameof(SpawnCor));
+    }
+
+    public void StopSpawn()
+    {
+        StopAllCoroutines();
     }
 
     private void Update()

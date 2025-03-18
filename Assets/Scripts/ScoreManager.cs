@@ -7,8 +7,8 @@ public class ScoreManager : MonoBehaviour
 {
     public int score { get; private set; }
     public int bestScore { get; private set; }
-    public UnityEvent<int> onScoreChange = new();
-    public UnityEvent<int> onBestScoreChange = new();
+    public UnityEvent onScoreChange = new();
+    public UnityEvent onBestScoreChange = new();
 
     private const string BEST_SCORE_KEY = "best_score";
 
@@ -19,18 +19,19 @@ public class ScoreManager : MonoBehaviour
             bestScore = int.Parse(PlayerPrefs.GetString(BEST_SCORE_KEY));
         }
         else 
-            bestScore = 0; 
+            bestScore = 0;
+        score = 0;
     }
 
     public void AddPoint()
     {
         score++;
-        onScoreChange.Invoke(score);
+        onScoreChange.Invoke();
 
         if (score >= bestScore)
         {
             bestScore = score;
-            onBestScoreChange.Invoke(bestScore);
+            onBestScoreChange.Invoke();
         }
     }
 }
