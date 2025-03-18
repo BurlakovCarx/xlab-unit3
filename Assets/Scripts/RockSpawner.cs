@@ -24,6 +24,8 @@ public class RockSpawner : MonoBehaviour
     public void StartSpawn()
     {
         _timer = 0;
+        _createdRocks.ForEach(x => Destroy(x));
+        _createdRocks.Clear();
     
         StartCoroutine(nameof(SpawnCor));
     }
@@ -46,7 +48,7 @@ public class RockSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(_interval);
 
-            Instantiate(_prefab, transform.position, Quaternion.identity);
+            _createdRocks.Add(Instantiate(_prefab, transform.position, Quaternion.identity));
         }
     }
 }

@@ -18,8 +18,7 @@ public class StickInteraction : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<Rigidbody>(out Rigidbody rb))
         {
-            if (collision.transform.position.x < transform.position.x)
-                FindObjectOfType<ScoreManager>().AddPoint();
+            FindObjectOfType<ScoreManager>().AddPoint();
 
             if (_isDown)
                 rb.AddForce(-15, 15, 0, ForceMode.Impulse);

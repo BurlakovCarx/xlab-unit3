@@ -16,22 +16,28 @@ public class ScoreManager : MonoBehaviour
     {
         if(PlayerPrefs.HasKey(BEST_SCORE_KEY))
         {
-            bestScore = int.Parse(PlayerPrefs.GetString(BEST_SCORE_KEY));
+            bestScore = PlayerPrefs.GetInt(BEST_SCORE_KEY);
         }
         else 
             bestScore = 0;
         score = 0;
     }
 
-    public void AddPoint()
+    public void SetScore(int score)
     {
-        score++;
+        this.score = score;
         onScoreChange.Invoke();
 
         if (score >= bestScore)
         {
             bestScore = score;
+            PlayerPrefs.SetInt(BEST_SCORE_KEY, bestScore);
             onBestScoreChange.Invoke();
         }
+    }
+
+    public void AddPoint()
+    {
+        SetScore(score + 1);      
     }
 }
