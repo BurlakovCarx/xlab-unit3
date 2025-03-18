@@ -10552,6 +10552,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef3cc1140d9fe642961675f486900a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
   _activeGameobjects:
   - {fileID: 341744816}
 --- !u!1 &981036644
@@ -15708,6 +15714,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2f742eab3d9d14abed2ca903e60ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 250864238}
+        m_TargetAssemblyTypeName: AttemptsUI, Assembly-CSharp
+        m_MethodName: Refresh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 648214702}
+        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+        m_MethodName: SetScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
   _activeGameobjects:
   - {fileID: 2101735083}
   - {fileID: 675077152}
@@ -16551,6 +16587,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2157b4a9ceedeb6488849992425b70a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExit:
+    m_PersistentCalls:
+      m_Calls: []
   _activeGameobjects:
   - {fileID: 1028701828}
 --- !u!1001 &1619387526
