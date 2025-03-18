@@ -27,4 +27,9 @@ public class PlayerController : MonoBehaviour
         _golfStick.localRotation = rot; 
     }
 
+    public void OnLoseRock()
+    {
+        Debug.Log("GameOver");
+    }
+
 }

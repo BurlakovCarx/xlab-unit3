@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3253338902730444084, guid: 8e3bd6209a8d80c44b340d9abb5e2c53, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7553927438582884662, guid: 8e3bd6209a8d80c44b340d9abb5e2c53, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.10251015
@@ -67,5 +71,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 27804545432889289, guid: 8e3bd6209a8d80c44b340d9abb5e2c53, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7236002321476960375}
   m_SourcePrefab: {fileID: 100100000, guid: 8e3bd6209a8d80c44b340d9abb5e2c53, type: 3}
+--- !u!1 &9014732809320363163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 27804545432889289, guid: 8e3bd6209a8d80c44b340d9abb5e2c53, type: 3}
+  m_PrefabInstance: {fileID: 9040989087073456978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7236002321476960375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014732809320363163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21921f040526da24588f8f98f448ad7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

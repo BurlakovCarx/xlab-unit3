@@ -5,15 +5,28 @@ using UnityEngine.Events;
 
 public class StickInteraction : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent onColllisionRock = new UnityEvent();
+    [HideInInspector] public UnityEvent onTrueColllisionRock = new UnityEvent();
+
+    private bool _isDown;
+
+    private void Update()
+    {
+        _isDown = Input.GetMouseButton(0);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.TryGetComponent<Rigidbody>(out Rigidbody rb))
         {
-            rb.AddForce(-10, 10, 0, ForceMode.Impulse);
+            if (collision.transform.position.x < transform.position.x)
+                Debug.Log("!");
+
+            if (_isDown)
+                rb.AddForce(-15, 15, 0, ForceMode.Impulse);
+            else
+                rb.AddForce(15, 15, 0, ForceMode.Impulse);
         }
 
-        onColllisionRock.Invoke();
+        onTrueColllisionRock.Invoke();
     }
 }
